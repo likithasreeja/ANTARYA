@@ -2,8 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import { StoreProvider } from './context/StoreContext';
+import { StoreProvider } from './context/storeContext';
 import './index.css';
+import { initGA } from './utils/analytics';
+
+// Initialize Google Analytics
+initGA();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
